@@ -1,0 +1,5 @@
+This project is released under a Creative Commons Attribution License.
+
+Please see the following URL for full license text:
+
+http://creativecommons.org/licenses/by/3.0/
