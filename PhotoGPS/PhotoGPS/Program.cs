@@ -115,7 +115,7 @@ namespace PhotoGPS
             //setConsoleWindowVisibility(false, Console.Title);
 
             var dt = GetGeoInfos();
-            SaveToCSV(dt);
+            SaveToCSV(dt, args.Length == 0 ? "GeoInfos.csv" : args[0]);
         }
 
 
