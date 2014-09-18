@@ -49,7 +49,7 @@ namespace PhotoGPS
 
             // add titles on first line
             DataRow firstRow = dt.NewRow();
-            firstRow["fileName"] = "fileName";
+            firstRow["fileName"] = "FileName";
             firstRow["Latitude"] = "Latitude";
             firstRow["Longitude"] = "Longitude";
             firstRow["GPSLatitudeRef"] = "GPSLatitudeRef";
