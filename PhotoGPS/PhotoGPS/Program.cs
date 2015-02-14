@@ -46,6 +46,9 @@ namespace PhotoGPS
             dt.Columns.Add("GPSLongitude", System.Type.GetType("System.String"));
             dt.Columns.Add("GPSAltitudeRef", System.Type.GetType("System.String"));
             dt.Columns.Add("GPSAltitude", System.Type.GetType("System.String"));
+            dt.Columns.Add("DateTime", System.Type.GetType("System.String"));
+            dt.Columns.Add("DateTimeOriginal", System.Type.GetType("System.String"));
+            dt.Columns.Add("DateTimeDigitized", System.Type.GetType("System.String"));
 
             // add titles on first line
             DataRow firstRow = dt.NewRow();
@@ -58,6 +61,9 @@ namespace PhotoGPS
             firstRow["GPSLongitude"] = "GPSLongitude";
             firstRow["GPSAltitudeRef"] = "GPSAltitudeRef";
             firstRow["GPSAltitude"] = "GPSAltitude";
+            firstRow["DateTime"] = "DateTime";
+            firstRow["DateTimeOriginal"] = "DateTimeOriginal";
+            firstRow["DateTimeDigitized"] = "DateTimeDigitized";
             dt.Rows.Add(firstRow);
 
             DirectoryInfo directoryInfo = new DirectoryInfo(System.Environment.CurrentDirectory);
@@ -87,6 +93,10 @@ namespace PhotoGPS
                     dr["GPSLongitude"] = file.Properties[ExifTag.GPSLongitude];
                     dr["GPSAltitudeRef"] = file.Properties[ExifTag.GPSAltitudeRef];
                     dr["GPSAltitude"] = file.Properties[ExifTag.GPSAltitude];
+                    dr["DateTime"] = file.Properties[ExifTag.DateTime];
+                    dr["DateTimeOriginal"] = file.Properties[ExifTag.DateTimeOriginal];
+                    dr["DateTimeDigitized"] = file.Properties[ExifTag.DateTimeDigitized];
+
                     dt.Rows.Add(dr);
 
                     succeedCount++;
